@@ -1,23 +1,24 @@
 /**
+ * Queueable class for handling IP Address Anomalies
  *
+ * @author Joseph Allen
  */
 public class IpAddressAnomalyHandler implements Queueable {
   private LoginHistory loginHistory;
   private SObject ipEvent;
 
   /**
-   * @description IpAddressAnomalyHandler description
-   * @param  loginHistory loginHistory description
-   * @param  ipEvent      ipEvent description
-   * @return              return description
+   * Cosntructor for setting local variables
+   * @param  loginHistory LoginHistory record matching the LoginHistoryId__c of a peristed ipEvent
+   * @param  ipEvent      IP Event that fired the process
    */
   public IpAddressAnomalyHandler(LoginHistory loginHistory, SObject ipEvent) {
     this.loginHistory = loginHistory;
     this.ipEvent = ipEvent;
   }
   /**
-   * @description execute description
-   * @param  context context description
+   *  Executes the queueable job
+   * @param  context QueueableContext System Type Containing the job ID
    */
   public void execute(QueueableContext context) {
     IpAddressAnomaly__c ipAnomaly = new IpAddressAnomaly__c();
