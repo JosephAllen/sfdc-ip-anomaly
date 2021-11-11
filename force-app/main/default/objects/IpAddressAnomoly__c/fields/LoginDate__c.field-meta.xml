@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LoginDate__c</fullName>
+    <description>The login time of the specified event. For example, 2020-01-20T19:12:26.965Z. Milliseconds are the most granular setting.</description>
+    <externalId>false</externalId>
+    <label>Login Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

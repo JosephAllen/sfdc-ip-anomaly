@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EventIdentifier__c</fullName>
+    <description>The unique identifier for each record in Event. Use this field as the primary key in your queries.</description>
+    <externalId>false</externalId>
+    <label>Event Identifier</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
