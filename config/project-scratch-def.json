@@ -1,7 +1,9 @@
 {
-  "orgName": "Demo company",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+    "EnableSetPasswordInApi"
+  ],
+  "orgName": "Demo company",
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

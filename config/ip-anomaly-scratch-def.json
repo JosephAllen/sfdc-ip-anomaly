@@ -1,0 +1,16 @@
+{
+    "description": "Scratch Org for Testing IP Anomalies",
+    "edition": "Developer",
+    "features": [
+        "EnableSetPasswordInApi"
+    ],
+    "hasSampleData": true,
+    "orgName": "IP Anomaly Testing",
+    "settings": {   "lightningExperienceSettings": {
+        "enableS1DesktopEnabled": true
+      },
+      "mobileSettings": {
+        "enableS1EncryptedStoragePref2": false
+      }
+  }
+}

@@ -1,17 +1,17 @@
 /**
  *
  */
-public class IpAddressAnomolyHandler implements Queueable {
+public class IpAddressAnomalyHandler implements Queueable {
   private LoginHistory loginHistory;
   private SObject ipEvent;
 
   /**
-   * @description IpAddressAnomolyHandler description
+   * @description IpAddressAnomalyHandler description
    * @param  loginHistory loginHistory description
    * @param  ipEvent      ipEvent description
    * @return              return description
    */
-  public IpAddressAnomolyHandler(LoginHistory loginHistory, SObject ipEvent) {
+  public IpAddressAnomalyHandler(LoginHistory loginHistory, SObject ipEvent) {
     this.loginHistory = loginHistory;
     this.ipEvent = ipEvent;
   }

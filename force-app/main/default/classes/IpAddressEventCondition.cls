@@ -10,16 +10,16 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
   public boolean evaluate(SObject event) {
     switch on event {
       when ApiEvent ipEvent {
-        return isIpAddressAnomoly(ipEvent);
+        return isIpAddressAnomaly(ipEvent);
       }
       when BulkApiResultEvent ipEvent {
-        return isIpAddressAnomoly(ipEvent);
+        return isIpAddressAnomaly(ipEvent);
       }
       when ListViewEvent ipEvent {
-        return isIpAddressAnomoly(ipEvent);
+        return isIpAddressAnomaly(ipEvent);
       }
       when ReportEvent ipEvent {
-        return isIpAddressAnomoly(ipEvent);
+        return isIpAddressAnomaly(ipEvent);
       }
       when null {
         return false;
@@ -34,7 +34,7 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
    * @param  ipEvent Event Type
    * @return         boolean
    */
-  private boolean isIpAddressAnomoly(SObject ipEvent) {
+  private boolean isIpAddressAnomaly(SObject ipEvent) {
     Id loginHistoryId = (Id) ipEvent.get('LoginHistoryId');
     String sourceIp = (String) ipEvent.get('SourceIp');
     String[] loginHistoryReadFields = new List<String>{
@@ -62,9 +62,9 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
       LIMIT 1
     ];
 
-    boolean isAnomoly = (lh.SourceIp != sourceIp &&
+    boolean isAnomaly = (lh.SourceIp != sourceIp &&
     appIgnoreList().indexOf(lh.Application) == -1);
-    if (isAnomoly) {
+    if (isAnomaly) {
       IpAddressAnomolyHandler ipAddressAnomolyHandler = new IpAddressAnomolyHandler(
         lh,
         ipEvent
@@ -72,7 +72,7 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
       System.enqueueJob(ipAddressAnomolyHandler);
     }
 
-    return isAnomoly;
+    return isAnomaly;
   }
   /**
    * Queries IpIgnoreAppSetting__c custom setting for apps to skip

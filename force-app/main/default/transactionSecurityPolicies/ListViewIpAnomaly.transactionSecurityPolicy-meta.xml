@@ -13,8 +13,8 @@
     </action>
     <active>true</active>
     <apexClass>IpAddressEventCondition</apexClass>
-    <developerName>ListViewIpAnomoly</developerName>
+    <developerName>ListViewIpAnomaly</developerName>
     <eventName>ListViewEvent</eventName>
-    <masterLabel>ListViewIpAnomoly</masterLabel>
+    <masterLabel>ListViewIpAnomaly</masterLabel>
     <type>CustomApexPolicy</type>
 </TransactionSecurityPolicy>
