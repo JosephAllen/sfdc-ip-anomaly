@@ -1,9 +1,11 @@
 /**
+ * Global Class to support Transaction Security Policie
  *
+ * @author Joseph Allen
  */
 global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnSecurity.AsyncCondition {
   /**
-   * @description Eavluates is the event is an anomoly
+   * Evaluates is the event is an anomaly
    * @param  event Real Time Event
    * @return       boolean
    */
@@ -30,7 +32,7 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
     }
   }
   /**
-   * Checks is an event is an ip anomoly
+   * Checks is an event is an ip anomaly
    * @param  ipEvent Event Type
    * @return         boolean
    */

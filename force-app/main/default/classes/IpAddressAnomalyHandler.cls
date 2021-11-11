@@ -8,7 +8,7 @@ public class IpAddressAnomalyHandler implements Queueable {
   private SObject ipEvent;
 
   /**
-   * Cosntructor for setting local variables
+   * Constructor for setting local variables
    * @param  loginHistory LoginHistory record matching the LoginHistoryId__c of a peristed ipEvent
    * @param  ipEvent      IP Event that fired the process
    */
@@ -17,7 +17,7 @@ public class IpAddressAnomalyHandler implements Queueable {
     this.ipEvent = ipEvent;
   }
   /**
-   *  Executes the queueable job
+   * Executes the queueable job
    * @param  context QueueableContext System Type Containing the job ID
    */
   public void execute(QueueableContext context) {
@@ -37,8 +37,8 @@ public class IpAddressAnomalyHandler implements Queueable {
     insert ipAnomaly;
   }
   /**
-   * @description getEventType description
-   * @return   return description
+   * Gets the Event type for the class level ipEvent variable
+   * @return   String representing the EventType name
    */
   private String getEventType() {
     switch on ipEvent {
