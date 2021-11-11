@@ -2,6 +2,7 @@
 
 Code for detecting and logging IP address anomalies. This uses the Transaction Security Policies process to determine if a session is being used from an IP address different than the login IP Address
 
+![](\.docs\IP_Anomaly_List_View.png)
 
 ## Creating the scratch org
 
