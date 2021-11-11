@@ -7,11 +7,9 @@
     <columns>EventType__c</columns>
     <columns>EventIp__c</columns>
     <columns>LoginIp__c</columns>
-    <columns>EventIdentifier__c</columns>
+    <columns>LoginApplication__c</columns>
+    <columns>LoginType__c</columns>
     <columns>LoginDate__c</columns>
-    <columns>LoginHistoryId__c</columns>
-    <columns>LoginKey__c</columns>
-    <columns>SessionKey__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

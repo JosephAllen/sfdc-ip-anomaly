@@ -6,12 +6,12 @@
         <freezeUser>false</freezeUser>
         <notifications>
             <inApp>false</inApp>
-            <sendEmail>false</sendEmail>
+            <sendEmail>true</sendEmail>
             <user>test-gtnkzqjdssxx@example.com</user>
         </notifications>
         <twoFactorAuthentication>false</twoFactorAuthentication>
     </action>
-    <active>false</active>
+    <active>true</active>
     <apexClass>IpAddressEventCondition</apexClass>
     <developerName>ListViewIpAnomaly</developerName>
     <eventName>ListViewEvent</eventName>
