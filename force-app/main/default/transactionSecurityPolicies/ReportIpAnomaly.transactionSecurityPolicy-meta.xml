@@ -6,12 +6,12 @@
         <freezeUser>false</freezeUser>
         <notifications>
             <inApp>false</inApp>
-            <sendEmail>true</sendEmail>
-            <user>test-pndcaim874ta@example.com</user>
+            <sendEmail>false</sendEmail>
+            <user>test-gtnkzqjdssxx@example.com</user>
         </notifications>
         <twoFactorAuthentication>false</twoFactorAuthentication>
     </action>
-    <active>true</active>
+    <active>false</active>
     <apexClass>IpAddressEventCondition</apexClass>
     <developerName>ReportIpAnomaly</developerName>
     <eventName>ReportEvent</eventName>

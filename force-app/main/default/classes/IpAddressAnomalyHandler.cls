@@ -20,20 +20,20 @@ public class IpAddressAnomalyHandler implements Queueable {
    * @param  context context description
    */
   public void execute(QueueableContext context) {
-    IpAddressAnomoly__c ipAnomoly = new IpAddressAnomoly__c();
-    ipAnomoly.EventDate__c = (DateTime) ipEvent.get('EventDate');
-    ipAnomoly.EventIdentifier__c = (String) ipEvent.get('EventIdentifier');
-    ipAnomoly.EventIp__c = (String) ipEvent.get('SourceIp');
-    ipAnomoly.LoginApplication__c = loginHistory.Application;
-    ipAnomoly.LoginDate__c = loginHistory.LoginTime;
-    ipAnomoly.LoginHistoryId__c = loginHistory.Id;
-    ipAnomoly.LoginIp__c = loginHistory.SourceIp;
-    ipAnomoly.LoginKey__c = (String) ipEvent.get('LoginKey');
-    ipAnomoly.LoginType__c = loginHistory.LoginType;
-    ipAnomoly.SessionKey__c = (String) ipEvent.get('SessionKey');
-    ipAnomoly.User__c = (Id) ipEvent.get('UserId');
-    ipAnomoly.EventType__c = getEventType();
-    insert ipAnomoly;
+    IpAddressAnomaly__c ipAnomaly = new IpAddressAnomaly__c();
+    ipAnomaly.EventDate__c = (DateTime) ipEvent.get('EventDate');
+    ipAnomaly.EventIdentifier__c = (String) ipEvent.get('EventIdentifier');
+    ipAnomaly.EventIp__c = (String) ipEvent.get('SourceIp');
+    ipAnomaly.LoginApplication__c = loginHistory.Application;
+    ipAnomaly.LoginDate__c = loginHistory.LoginTime;
+    ipAnomaly.LoginHistoryId__c = loginHistory.Id;
+    ipAnomaly.LoginIp__c = loginHistory.SourceIp;
+    ipAnomaly.LoginKey__c = (String) ipEvent.get('LoginKey');
+    ipAnomaly.LoginType__c = loginHistory.LoginType;
+    ipAnomaly.SessionKey__c = (String) ipEvent.get('SessionKey');
+    ipAnomaly.User__c = (Id) ipEvent.get('UserId');
+    ipAnomaly.EventType__c = getEventType();
+    insert ipAnomaly;
   }
   /**
    * @description getEventType description

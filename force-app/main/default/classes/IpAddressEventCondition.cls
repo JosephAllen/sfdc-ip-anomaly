@@ -65,11 +65,11 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
     boolean isAnomaly = (lh.SourceIp != sourceIp &&
     appIgnoreList().indexOf(lh.Application) == -1);
     if (isAnomaly) {
-      IpAddressAnomolyHandler ipAddressAnomolyHandler = new IpAddressAnomolyHandler(
+      IpAddressAnomalyHandler ipAddressAnomalyHandler = new IpAddressAnomalyHandler(
         lh,
         ipEvent
       );
-      System.enqueueJob(ipAddressAnomolyHandler);
+      System.enqueueJob(ipAddressAnomalyHandler);
     }
 
     return isAnomaly;
