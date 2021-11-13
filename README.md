@@ -2,9 +2,9 @@
 
 Code for detecting and logging IP address anomalies. This uses the Transaction Security Policies process to determine if a session is being used from an IP address different than the login IP Address
 
-![List View Zoomed](.docs/IP_Anomaly_List_View_Zoom.png)
+![List View Zoomed](docs/IP_Anomaly_List_View_Zoom.png)
 
-![List View](.docs/IP_Anomaly_List_View.png)
+![List View](docs/IP_Anomaly_List_View.png)
 
 ## Creating the scratch org
 
@@ -16,7 +16,7 @@ sfdx force:org:create --definitionfile config/ip-anomaly-scratch-def.json --dura
 
 ### IpAddressAnomaly\_\_c
 
-![IP Anomaly Record](.docs/IP_Anomaly_Record.png)
+![IP Anomaly Record](docs/IP_Anomaly_Record.png)
 
 - **Description:** Stores IP Address Anomalies. Events are stored here when the Login IP is different than the Event IP. Apps can be excluded from tracking by adding them to the IpIgnoreAppSetting\_\_c custom setting object.
 - **Label:** IP Address Anomaly
@@ -47,7 +47,7 @@ sfdx force:org:create --definitionfile config/ip-anomaly-scratch-def.json --dura
 
 ### IpIgnoreAppSetting\_\_c
 
-![IP Ignore Apps Settings Object](.docs/IP_Ignore_Apps_Object.png)
+![IP Ignore Apps Settings Object](docs/IP_Ignore_Apps_Object.png)
 
 - **Description:** List of apps which may have events coming from an IP address different than the login IP address. For example "Salesforce for iOS".
 
