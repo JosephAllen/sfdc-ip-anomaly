@@ -48,5 +48,4 @@ $RECYCLE.BIN/
 .prettierrc
 jest.config.js
 package-lock.json
-package-lock.json
 sfdx-project.json
