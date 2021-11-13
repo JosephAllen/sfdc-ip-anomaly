@@ -3,7 +3,7 @@
     <customSettingsType>List</customSettingsType>
     <description>List of apps which may have events coming from an IP address different than the login IP address. For example &quot;Salesforce for iOS&quot;.
 
-Apps added here will note be logged into the IpAddressAnomaly__c during Transaction Security policy events.</description>
+Apps added here will not be logged into the IpAddressAnomaly__c during Transaction Security policy events.</description>
     <enableFeeds>false</enableFeeds>
     <label>IP Ignore Apps</label>
     <visibility>Public</visibility>
