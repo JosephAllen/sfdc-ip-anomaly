@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>LoginKey__c</fullName>
+    <description>The string that ties together all events in a given user’s login session. The session starts with a login event and ends with either a logout event or the user session expiring. This value is null if the event that was generated was from a dashboard refresh, a multi-block report, or a scheduled report. For example, lUqjLPQTWRdvRG4.</description>
     <externalId>false</externalId>
     <label>Login Key</label>
     <length>30</length>
