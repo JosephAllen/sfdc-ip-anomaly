@@ -41,6 +41,7 @@ $RECYCLE.BIN/
 
 # Unneeded Files
 .husky/
+.mdapi/
 .vscode/
 .eslintignore
 .forceignore
