@@ -16,6 +16,8 @@ sfdx force:org:create --definitionfile config/ip-anomaly-scratch-def.json --dura
 
 ### IpAddressAnomaly\_\_c
 
+![List View](.docs/IP_Anomaly_Record.png)
+
 - **Description:** Stores IP Address Anomalies. Events are stored here when the Login IP is different than the Event IP. Apps can be excluded from tracking by adding them to the IpIgnoreAppSetting\_\_c custom setting object.
 - **Label:** IP Address Anomaly
 - **Plural Label:** IP Address Anomalies
@@ -42,3 +44,11 @@ sfdx force:org:create --definitionfile config/ip-anomaly-scratch-def.json --dura
 | Login Type        | LoginType\_\_c        | Text     | The type of login used to access the session.                                                                                                                                                                                                                                                                                                                                                                                       | false    |
 | Session Key       | SessionKey\_\_c       | Text     | The user's unique session ID. Use this value to identify all user events within a session. When a user logs out and logs in again, a new session is started. This value is null if the event that was generated was from a dashboard refresh, a multi-block report, or a scheduled report. For example, vMASKIU6AxEr+Op5.                                                                                                           | false    |
 | User              | User\_\_c             | Lookup   | Lookup to the origin username in the format of user@company.com at the time the event was created.                                                                                                                                                                                                                                                                                                                                  | false    |
+
+### IpIgnoreAppSetting\_\_c
+
+- **Description:** List of apps which may have events coming from an IP address different than the login IP address. For example "Salesforce for iOS".
+
+  Apps added here will not be logged into the IpAddressAnomaly\_\_c during Transaction Security policy events.
+
+- **Label:** IP Ignore Apps
