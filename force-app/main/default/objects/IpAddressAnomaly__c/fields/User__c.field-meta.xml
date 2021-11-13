@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>User__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the origin username in the format of user@company.com at the time the event was created.</description>
     <externalId>false</externalId>
     <label>User</label>
     <referenceTo>User</referenceTo>

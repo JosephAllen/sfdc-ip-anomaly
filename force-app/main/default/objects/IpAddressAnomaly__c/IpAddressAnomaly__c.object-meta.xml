@@ -143,6 +143,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores IP Address Anomalies. Events are stored here when the Login IP is different than the Event IP. Apps can be excluded from tracking by adding them to the IpIgnoreAppSetting__c custom setting object.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>false</enableBulkApi>
     <enableFeeds>false</enableFeeds>

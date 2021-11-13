@@ -13,6 +13,7 @@
     </action>
     <active>false</active>
     <apexClass>IpAddressEventCondition</apexClass>
+    <description>Policy for checking IP Anomalies when the Report Event is fired.</description>
     <developerName>ReportIpAnomaly</developerName>
     <eventName>ReportEvent</eventName>
     <masterLabel>ReportIpAnomaly</masterLabel>

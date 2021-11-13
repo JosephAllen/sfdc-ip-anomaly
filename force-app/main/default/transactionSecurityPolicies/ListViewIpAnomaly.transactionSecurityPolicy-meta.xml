@@ -13,6 +13,7 @@
     </action>
     <active>true</active>
     <apexClass>IpAddressEventCondition</apexClass>
+    <description>Policy for checking IP Anomalies when the List View Event is fired.</description>
     <developerName>ListViewIpAnomaly</developerName>
     <eventName>ListViewEvent</eventName>
     <masterLabel>ListViewIpAnomaly</masterLabel>
