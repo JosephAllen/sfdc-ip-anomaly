@@ -63,10 +63,6 @@ public class IpAddressEventCondition_Test {
         System.assert(eventCondition.evaluate(testEvent));
     }
     static LoginHistory getLoginHistory() {
-        return [
-            SELECT Application, LoginTime, LoginType, SourceIp
-            FROM LoginHistory
-            LIMIT 1
-        ];
+        return [SELECT Application, LoginTime, LoginType, SourceIp FROM LoginHistory LIMIT 1];
     }
 }

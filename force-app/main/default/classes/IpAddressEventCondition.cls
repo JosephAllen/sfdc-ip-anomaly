@@ -39,12 +39,7 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
     private boolean isIpAddressAnomaly(SObject ipEvent) {
         Id loginHistoryId = (Id) ipEvent.get('LoginHistoryId');
         String sourceIp = (String) ipEvent.get('SourceIp');
-        String[] loginHistoryReadFields = new List<String>{
-            'Application',
-            'LoginTime',
-            'LoginType',
-            'SourceIp'
-        };
+        String[] loginHistoryReadFields = new List<String>{ 'Application', 'LoginTime', 'LoginType', 'SourceIp' };
         if (!Schema.sObjectType.LoginHistory.isAccessible()) {
             return null;
         }
@@ -64,13 +59,9 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
             LIMIT 1
         ];
 
-        boolean isAnomaly = (lh.SourceIp != sourceIp &&
-        appIgnoreList().indexOf(lh.Application) == -1);
+        boolean isAnomaly = (lh.SourceIp != sourceIp && appIgnoreList().indexOf(lh.Application) == -1);
         if (isAnomaly) {
-            IpAddressAnomalyHandler ipAddressAnomalyHandler = new IpAddressAnomalyHandler(
-                lh,
-                ipEvent
-            );
+            IpAddressAnomalyHandler ipAddressAnomalyHandler = new IpAddressAnomalyHandler(lh, ipEvent);
             System.enqueueJob(ipAddressAnomalyHandler);
         }
 
@@ -81,8 +72,7 @@ global class IpAddressEventCondition implements TxnSecurity.EventCondition, TxnS
      * @return   List of Apps to Skip
      */
     private string[] appIgnoreList() {
-        IpIgnoreAppSetting__c[] ipIgnoreAppSetting = IpIgnoreAppSetting__c.getall()
-            .values();
+        IpIgnoreAppSetting__c[] ipIgnoreAppSetting = IpIgnoreAppSetting__c.getall().values();
         String[] appIgnoreList = new List<String>{};
         for (IpIgnoreAppSetting__c ai : IpIgnoreAppSetting) {
             appIgnoreList.add(ai.Name);
